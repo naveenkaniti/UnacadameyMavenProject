@@ -14,13 +14,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterTest;
 
-public class Subscription {
+public class Subscription 
+{
 	WebDriver driver;
 	HomePagePom WebElements;
 	String baseUrl;
 	ConfigFileReader configFileReader;
   @Test
-  public void getSubscription() {
+  public void getSubscription() 
+  {
 	  WebElements.clickOnGetSubscription();
 	  WebElements.clickOnSelectPlus();
 	  WebElements.clickOnPlan();
@@ -28,7 +30,8 @@ public class Subscription {
 	  WebElements.clickOnPay();
   }
   @BeforeTest
-  public void launchApplication() {
+  public void launchApplication() 
+  {
 	  ChromeOptions options = new ChromeOptions();
       options.addArguments("--disable-notifications");
       configFileReader=new ConfigFileReader();
@@ -44,7 +47,8 @@ public class Subscription {
   }
 
   @AfterTest
-  public void closeBrowser() {
+  public void closeBrowser() 
+  {
 	  driver.quit();
   }
 

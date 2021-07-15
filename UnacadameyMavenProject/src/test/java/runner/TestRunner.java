@@ -14,7 +14,8 @@ import io.cucumber.junit.CucumberOptions;
         features ="src/test/resources/UnacademyFeatures/Getsubscription.feature",
         glue={"stepDefinition"},
         dryRun = false,
-        monochrome = true
+        monochrome = true,
+        plugin = { "pretty", "html:target/cucumber-reports" }
 )
 
  
